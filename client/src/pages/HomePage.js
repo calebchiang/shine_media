@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import AboutUs from '../components/AboutUs';
 import ContactForm from '../components/ContactForm';
+import Services from '../components/Services';
 
 function HomePage() {
     return (
@@ -10,6 +11,7 @@ function HomePage() {
             <Navbar />
             <Hero />
             <AboutUs />
+            <Services/>
         </div>
     );
 }
