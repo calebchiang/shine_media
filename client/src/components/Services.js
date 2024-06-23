@@ -10,7 +10,7 @@ function Services() {
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-13">
                 <ServiceCard
                     logo={facebookLogo}
                     title="Facebook Advertising"

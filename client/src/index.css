@@ -3,18 +3,55 @@
 @tailwind utilities;
 
 .form-background {
-    background-image: url('/public/hvac_stock.jpeg'); /* Make sure the path is correct */
+    background-image: url('/public/hvac_stock.jpeg');
     background-size: cover;
     background-position: center;
-    position: relative; /* This can be adjusted based on your layout needs */
-    width: 100%; /* Cover the full width */
-    height: 100vh; /* Adjust height as needed, 100vh covers the full viewport height */
+    position: relative;
+    width: 100%;
+    height: 100vh;
 }
 
-.bg-white.bg-opacity-90 {
-    background-color: rgba(255, 255, 255, 0.9);
+.bg-black.bg-opacity-90 {
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .bg-white {
-    background-color: white; /* Full white, no transparency */
+    background-color: white;
+}
+.background-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    background-image: url('/public/business_woman.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+.background-overlay {
+    position: relative;
+    z-index: 0;
+}
+
+.overlay-content {
+    position: relative;
+    z-index: 1;
+}
+
+.service-block {
+    max-width: 360px;
+    flex: 1 1 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+@media (max-width: 800px) {
+    .service-block {
+        width: 100%;
+    }
 }

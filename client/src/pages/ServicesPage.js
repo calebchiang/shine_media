@@ -1,10 +1,11 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Services from "../components/Services";
 function ServicesPage() {
     return (
         <div>
             <Navbar />
-            <p>Services Page to be implemented</p>
+            <Services/>
         </div>
     );
 }
