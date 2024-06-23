@@ -2,3 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.form-background {
+    background-image: url('/public/hvac_stock.jpeg'); /* Make sure the path is correct */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* This can be adjusted based on your layout needs */
+    width: 100%; /* Cover the full width */
+    height: 100vh; /* Adjust height as needed, 100vh covers the full viewport height */
+}
+
+.bg-white.bg-opacity-90 {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.bg-white {
+    background-color: white; /* Full white, no transparency */
+}
