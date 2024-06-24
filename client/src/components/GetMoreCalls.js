@@ -7,7 +7,7 @@ function GetMoreCalls() {
     ];
 
     return (
-        <div className="background-overlay text-center py-10 text-white font-roboto mt-2">
+        <div className="background-overlay text-center py-10 text-white font-bitter mt-2">
             <div className="overlay-content">
                 <h2 className="text-4xl font-bold text-blue-100 mb-4">Get More Phone Calls</h2>
                 <p className="text-xl mb-8">For These Types Of HVAC Services</p>

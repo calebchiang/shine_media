@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
-        <div className="flex items-center font-roboto">
+        <div className="flex items-center font-bitter">
             <Link to="/">
             <img src="/shine_media_logo_transparent.png" alt="Shine Media Logo" className="h-20 w-20 ml-24" style={{ marginBottom: '-1rem', marginRight: '-1rem' }}  />
             </Link>

@@ -19,7 +19,7 @@ function ContactUs() {
     }, []);
 
     return (
-        <div className="border-t border-gray-100 font-roboto flex justify-between bg-white p-5">
+        <div className="border-t border-gray-100 font-bitter flex justify-between bg-white p-5">
             <div className="flex-1 mr-5 ml-24">
                 <h1 className="mt-20 text-5xl font-bold">Contact Us</h1>
                 <p className="mt-2 text-xl">How we can help your business?</p>

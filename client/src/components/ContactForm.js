@@ -37,7 +37,7 @@ function ContactForm() {
     };
 
     return (
-        <div className="bg-blue-50 flex items-center justify-center p-20 font-roboto">
+        <div className="bg-blue-50 flex items-center justify-center p-20 font-bitter">
             <div className="bg-white max-w-lg mx-auto p-6 shadow-md rounded-lg">
                 <div className="bg-white p-4 rounded-md">
                     <h2 className="text-2xl font-semibold text-gray-900 mb-6">Let's Discuss Your Needs!</h2>
