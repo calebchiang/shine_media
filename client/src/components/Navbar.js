@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <div className="flex items-center font-roboto">
             <Link to="/">
-            <img src="/shine_media_logo_transparent.png" alt="Shine Media Logo" className="w-24 ml-16" style={{ marginBottom: '-1rem', marginRight: '-1rem' }}  />
+            <img src="/shine_media_logo_transparent.png" alt="Shine Media Logo" className="h-20 w-20 ml-24" style={{ marginBottom: '-1rem', marginRight: '-1rem' }}  />
             </Link>
             <h1 className="text-2xl font-bold"><Link to="/">shine media</Link></h1>
             <div className="text-2xl ml-80">
