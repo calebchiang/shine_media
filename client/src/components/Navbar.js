@@ -18,8 +18,8 @@ function Navbar() {
             <div className="flex-grow">
                 <div className="flex justify-end space-x-16 hidden md:flex">
                     <Link to="/services" className="text-lg hover:underline">Services</Link>
-                    <Link to="/about" className="text-lg hover:underline">About Us</Link>
-                    <Link to="/contact" className="text-lg hover:underline">Contact</Link>
+                    <Link to="/about" className="text-lg hover:underline">About</Link>
+                    <Link to="/contact" className="text-lg hover:underline">Contact Us</Link>
                 </div>
             </div>
             <div className="flex items-center">
@@ -34,8 +34,8 @@ function Navbar() {
                 {isMenuOpen && (
                     <div className="absolute top-16 right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg md:hidden">
                         <Link to="/services" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Services</Link>
-                        <Link to="/about" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">About Us</Link>
-                        <Link to="/contact" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Contact</Link>
+                        <Link to="/about" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">About</Link>
+                        <Link to="/contact" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Contact Us</Link>
                     </div>
                 )}
             </div>

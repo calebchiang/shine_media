@@ -5,7 +5,11 @@ import AboutUs from '../components/AboutUs';
 import ContactForm from '../components/ContactForm';
 import Services from '../components/Services';
 import WhyFacebookAds from "../components/WhyFacebookAds";
-import GetMoreCalls from "../components/GetMoreCalls";
+import TargetAudience from "../components/TargetAudience";
+import GivesCoverage from "../components/GivesCoverage";
+import DeliverPerformance from "../components/DeliverPerformance";
+import WantMoreClients from "../components/WantMoreClients";
+import Footer from '../components/Footer';
 
 function HomePage() {
     return (
@@ -14,8 +18,14 @@ function HomePage() {
             <Hero />
             <AboutUs />
             <Services/>
-            <GetMoreCalls />
             <WhyFacebookAds />
+            <TargetAudience />
+            <GivesCoverage />
+            <DeliverPerformance />
+            <WantMoreClients />
+            <ContactForm />
+            <Footer />
+
         </div>
     );
 }

@@ -9,7 +9,7 @@ function Services() {
     const reportingImage = '/analytics.png'
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8 border bg-gray-100 border-gray-200 rounded-md mt-10">
             <div className="flex flex-wrap justify-center gap-13">
                 <ServiceCard
                     logo={facebookLogo}
