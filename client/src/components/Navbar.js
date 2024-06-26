@@ -11,6 +11,7 @@ function Navbar() {
     };
 
     return (
+        <div className="bg-gray-50">
         <div className="flex items-center justify-between font-bitter px-0" style={{ maxWidth: '1200px', margin: '0 auto', height: '90px' }}>
             <Link to="/" style={{ marginLeft: '-30px' }}>
                 <img src="/logo3.png" alt="Shine Media Logo" style={{ height: '270px', width: 'auto', position: 'relative', top: '5px'  }} />
@@ -23,7 +24,7 @@ function Navbar() {
                 </div>
             </div>
             <div className="flex items-center">
-                <Link to="/contact">
+                <Link to="/contact-form">
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded-md ml-20">
                         Hire Us Today
                     </button>
@@ -39,6 +40,7 @@ function Navbar() {
                     </div>
                 )}
             </div>
+        </div>
         </div>
     );
 }

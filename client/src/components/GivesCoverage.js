@@ -2,7 +2,7 @@ import React from 'react';
 
 function GivesCoverage() {
     return (
-        <div className="flex justify-between items-center p-6 max-w-6xl mx-auto font-bitter mt-16">
+        <div className="flex justify-between items-center p-6 max-w-6xl mx-auto font-bitter mt-16 bg-gray-100 rounded-lg">
             <div className="w-1/2 flex justify-start mr-8">
                 <img src="/location.jpg" alt="Gives Coverage" className="w-full h-auto rounded-lg" />
             </div>

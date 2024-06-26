@@ -2,7 +2,7 @@ import React from 'react';
 
 function DeliverPerformance() {
     return (
-        <div className="flex justify-between items-center p-6 max-w-6xl mx-auto font-bitter mt-16">
+        <div className="flex justify-between items-center p-6 max-w-6xl mx-auto font-bitter mt-16 bg-gray-100 rounded-lg">
             <div className="w-1/2 pr-6">
                 <h2 className="text-2xl font-bold">Deliver Performance Metrics</h2>
                 <p className="mt-2 text-gray-700">
