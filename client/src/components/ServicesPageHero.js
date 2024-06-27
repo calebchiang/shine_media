@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function ServicesPageHero() {
     return (
-        <div className="bg-blue-500 p-8 md:p-20 lg:p-36 font-bitter flex flex-col md:flex-row items-center justify-center ">
+        <div className="bg-gradient-to-r from-blue-600 to-green-300 p-8 md:p-20 lg:p-36 font-bitter flex flex-col md:flex-row items-center justify-center ">
             <div className="text-left text-white flex-1 mb-4 md:mb-0">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font leading-tight">
                     <span className="font-bold">Your Facebook Ads Agency </span> for Predictable Growth

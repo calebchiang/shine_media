@@ -9,7 +9,6 @@ function ContactPage() {
         <div>
             <Navbar />
             <ContactUs />
-            <ContactForm />
             <Footer />
         </div>
     );

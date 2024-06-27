@@ -1,10 +1,16 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import AboutUsHero from "../components/AboutUsHero";
+import Footer from "../components/Footer";
+import AboutUsMission from "../components/AboutUsMission";
+
 function AboutPage() {
     return (
         <div>
             <Navbar />
-            <p>About Us Page to be implemented</p>
+            <AboutUsHero />
+            <AboutUsMission />
+            <Footer />
         </div>
     );
 }
