@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import '../index.css';
+import { getDatabase, ref, push } from "firebase/database";
+import { app } from '../firebaseConfig'; // Adjust the path to where your firebaseConfig.js is located
 
 function ContactForm() {
     const [formData, setFormData] = useState({
         goals: '',
         email: '',
         name: ''
+    });
+
+    const [submitStatus, setSubmitStatus] = useState({
+        message: '',
+        success: false
     });
 
     const handleChange = (e) => {
@@ -18,22 +25,30 @@ function ContactForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            });
-            if (response.ok) {
-                console.log('Form submitted successfully');
-            } else {
-                console.log('Failed to submit the form');
-            }
-        } catch (error) {
-            console.error('Error:', error);
+
+        // Simple validation to ensure all fields are filled
+        if (!formData.goals || !formData.email || !formData.name) {
+            setSubmitStatus({ message: 'Please fill in all fields.', success: false });
+            return;
         }
+
+        // Access the database
+        const database = getDatabase(app);
+        const formRef = ref(database, 'forms');
+
+        // Push the data to Firebase Realtime Database
+        push(formRef, {
+            goals: formData.goals,
+            email: formData.email,
+            fullName: formData.name,
+        }).then(() => {
+            console.log('Form submitted successfully');
+            setFormData({ goals: '', email: '', name: '' }); // Reset the form fields
+            setSubmitStatus({ message: 'Form submitted successfully!', success: true });
+        }).catch((error) => {
+            console.error('Failed to submit the form:', error);
+            setSubmitStatus({ message: 'Failed to submit the form. Please try again.', success: false });
+        });
     };
 
     return (
@@ -73,17 +88,11 @@ function ContactForm() {
                                 />
                             </div>
                         </div>
-                        <div className="flex items-start">
-                            <div className="flex items-center h-5">
-                                <input
-                                    type="checkbox"
-                                    className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
-                                />
+                        {submitStatus.message && (
+                            <div className={`text-sm ${submitStatus.success ? 'text-green-500' : 'text-red-500'}`}>
+                                {submitStatus.message}
                             </div>
-                            <div className="ml-3 text-sm">
-                                <label className="font-medium text-gray-700">I am human</label>
-                            </div>
-                        </div>
+                        )}
                         <button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-500 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Send
                         </button>
